@@ -30,3 +30,7 @@ SELECT *
 FROM `degrees` 
 WHERE `level` LIKE 'magistrale%';
 
+7. Da quanti dipartimenti è composta l'università?
+SELECT COUNT(`id`)
+FROM `departments`;
+
