@@ -105,3 +105,12 @@ ON students.id = exam_student.student_id
 INNER JOIN exams
 ON exams.id = exam_student.exam_id
 GROUP BY exam_student.student_id;
+
+SELECT students.id, students.name, students.surname, students.registration_number, COUNT(exams.id), exam_student.vote
+FROM students 
+INNER JOIN exam_student
+ON students.id = exam_student.student_id
+INNER JOIN exams
+ON exams.id = exam_student.exam_id
+WHERE exam_student.vote = 18
+GROUP BY exam_student.student_id;
